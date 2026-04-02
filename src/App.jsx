@@ -217,7 +217,7 @@ export default function App() {
           <section className="mb-16">
             <div className="flex items-center gap-2 mb-8">
                <LayoutGrid className="w-5 h-5 text-orange-500" />
-               <h3 className="text-xs font-black uppercase tracking-widest text-slate-500">Quick Launch</h3>
+               <h3 className="text-xs font-black uppercase tracking-widest text-slate-500">Choose Your Vibe</h3>
             </div>
             <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
                {CATEGORIES.map(cat => (
