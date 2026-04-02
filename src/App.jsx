@@ -207,7 +207,7 @@ export default function App() {
              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
              <div className="absolute inset-0 p-8 sm:p-12 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 text-orange-500 text-[10px] font-black uppercase tracking-[0.3em] mb-4"><Ship size={14} /> Guided by Captain Key West</div>
-                <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-4 leading-[0.85] uppercase">Find Your Key West <br/><span className="text-orange-500">SANDBAR</span></h2>
+                <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-4 leading-[0.85] uppercase">Find Your Key West <br/><span style={{ color: '#34a4b8' }}>SANDBAR</span></h2>
                 <p className="text-slate-300 max-w-sm text-sm sm:text-base font-medium mb-8 leading-relaxed opacity-80">There are over 170 sandbar trips in Key West. Tell us your vibe and we'll launch your perfect day.</p>
                
              </div>
