@@ -183,8 +183,8 @@ export default function App() {
               </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-2">
-              <a href="https://captainkeywest.com/bar-crawl" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-500 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-orange-500 hover:text-white transition group"><Beer size={14} className="group-hover:animate-bounce" /> Bar Crawl</a>
-              <a href="https://captainkeywest.com/app" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"><Smartphone size={14} /> KW App</a>
+              <a href="https://barcrawl.captainkeywest.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-500 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-orange-500 hover:text-white transition group"><Beer size={14} className="group-hover:animate-bounce" /> Bar Crawl</a>
+              <a href="https://appcaptainkeywest.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"><Smartphone size={14} /> KW App</a>
               <a href="https://captainkeywest.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"><ExternalLink size={14} /> Website</a>
               <div className="w-px h-6 bg-white/10 mx-2 hidden sm:block"></div>
               <button onClick={() => setCurrentView(currentView === 'home' ? 'saved' : 'home')} className={`relative p-2 rounded-full transition-all ${currentView === 'saved' ? 'bg-orange-500 text-white' : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'}`}>
@@ -207,7 +207,7 @@ export default function App() {
              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
              <div className="absolute inset-0 p-8 sm:p-12 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 text-orange-500 text-[10px] font-black uppercase tracking-[0.3em] mb-4"><Ship size={14} /> Guided by Captain Key West</div>
-                <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-4 leading-[0.85] uppercase">HIT THE <br/><span className="text-orange-500">BRICKS</span></h2>
+                <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-4 leading-[0.85] uppercase">Find Your Key West <br/><span className="text-orange-500">SANDBAR</span></h2>
                 <p className="text-slate-300 max-w-sm text-sm sm:text-base font-medium mb-8 leading-relaxed opacity-80">There are over 170 sandbar trips in Key West. Tell us your vibe and we'll launch your perfect day.</p>
                 <div className="flex flex-wrap gap-4">
                    <button className="bg-orange-500 px-10 py-4 rounded-full font-black text-xs tracking-widest uppercase hover:bg-orange-600 transition shadow-xl shadow-orange-500/40">EXPLORE LOCAL BARS</button>
