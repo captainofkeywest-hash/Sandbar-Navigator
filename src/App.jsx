@@ -170,35 +170,75 @@ export default function App() {
         .scrollbar-hide::-webkit-scrollbar { display: none; }
       `}</style>
 
-      <header className="glass sticky top-0 z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 cursor-pointer" onClick={() => setCurrentView('home')}>
-              <div className="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
-                <Ship className="text-white w-6 h-6" />
-              </div>
-              <div>
-                <h1 className="text-lg font-extrabold tracking-tight leading-none uppercase">CAPTAIN<span className="text-orange-500"> KEY WEST</span></h1>
-                <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Sandbar Navigator</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <a href="https://barcrawl.captainkeywest.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-500 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-orange-500 hover:text-white transition group"><Beer size={14} className="group-hover:animate-bounce" /> Bar Crawl</a>
-              <a href="https://app.captainkeywest.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"><Smartphone size={14} /> KW App</a>
-              <a href="https://captainkeywest.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"><ExternalLink size={14} /> Website</a>
-              <div className="w-px h-6 bg-white/10 mx-2 hidden sm:block"></div>
-              <button onClick={() => setCurrentView(currentView === 'home' ? 'saved' : 'home')} className={`relative p-2 rounded-full transition-all ${currentView === 'saved' ? 'bg-orange-500 text-white' : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'}`}>
-                <Heart size={20} className={savedTripIds.length > 0 && currentView !== 'saved' ? "fill-red-500 text-red-500" : ""} />
-                {savedTripIds.length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-white text-black text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full shadow-sm">
-                    {savedTripIds.length}
-                  </span>
-                )}
-              </button>
-            </div>
-          </div>
+
+<header className="glass sticky top-0 z-50 border-b border-white/10">
+  <div className="max-w-7xl mx-auto px-6 py-4">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* Logo & Title */}
+      <div className="flex items-center gap-3 cursor-pointer" onClick={() => setCurrentView('home')}>
+        <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-orange-500/10">
+          <img 
+            src="https://captainkeywest.com/wp-content/uploads/2026/04/Captain-Key-West-Sandbar-Navigator-Icon-2-512x512-1.png" 
+            alt="Captain Key West Logo" 
+            className="w-full h-full object-cover"
+          />
         </div>
-      </header>
+        <div>
+          <h1 className="text-lg font-extrabold tracking-tight leading-none uppercase">
+            CAPTAIN<span className="text-orange-500"> KEY WEST</span>
+          </h1>
+          <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Sandbar Navigator</span>
+        </div>
+      </div>
+
+      {/* Header Action Buttons */}
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <a 
+          href="https://barcrawl.captainkeywest.com/" 
+          target="_blank" 
+          rel="noreferrer" 
+          className="flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-500 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-orange-500 hover:text-white transition group"
+        >
+          <Beer size={14} className="group-hover:animate-bounce" /> Bar Crawl
+        </a>
+        <a 
+          href="https://app.captainkeywest.com/" 
+          target="_blank" 
+          rel="noreferrer" 
+          className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"
+        >
+          <Smartphone size={14} /> KW App
+        </a>
+        <a 
+          href="https://captainkeywest.com" 
+          target="_blank" 
+          rel="noreferrer" 
+          className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition"
+        >
+          <ExternalLink size={14} /> Website
+        </a>
+        
+        <div className="w-px h-6 bg-white/10 mx-2 hidden sm:block"></div>
+
+        <button 
+          onClick={() => setCurrentView(currentView === 'home' ? 'saved' : 'home')} 
+          className={`relative p-2 rounded-full transition-all ${
+            currentView === 'saved' ? 'bg-orange-500 text-white' : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
+          }`}
+        >
+          <Heart size={20} className={savedTripIds.length > 0 && currentView !== 'saved' ? "fill-red-500 text-red-500" : ""} />
+          {savedTripIds.length > 0 && (
+            <span className="absolute -top-1 -right-1 bg-white text-black text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full shadow-sm">
+              {savedTripIds.length}
+            </span>
+          )}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+      
+      
 
       {currentView === 'home' ? (
         <main className="max-w-7xl mx-auto px-6 pt-8 pb-24">
