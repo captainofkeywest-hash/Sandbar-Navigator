@@ -319,15 +319,34 @@ export default function App() {
                 <button onClick={() => setSelectedCategories([])} className="mt-8 text-orange-500 font-black uppercase text-[10px] tracking-[0.3em] hover:underline">Reset Search</button>
              </div>
           )}
-          <footer className="mt-32 border-t border-white/5 pt-12 pb-20 text-center">
-             <div className="flex items-center justify-center gap-4 mb-8">
-                <div className="h-px w-12 bg-white/10"></div>
-                <Ship className="text-slate-700" size={20} />
-                <div className="h-px w-12 bg-white/10"></div>
-             </div>
-             <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.5em] mb-4">Captain Key West &copy; {new Date().getFullYear()}</p>
-             <a href="https://captainkeywest.com" target="_blank" rel="noreferrer" className="text-orange-500 text-[10px] font-black uppercase tracking-widest hover:text-white transition">Return to CaptainKeyWest.com</a>
-          </footer>
+
+<footer className="mt-32 border-t border-white/5 pt-12 pb-20 text-center">
+  {/* Replaced icon line with your new brand icon */}
+  <div className="flex justify-center mb-8">
+    <div className="w-12 h-12 rounded-2xl overflow-hidden shadow-lg opacity-50 hover:opacity-100 transition-opacity duration-300">
+      <img 
+        src="https://captainkeywest.com/wp-content/uploads/2026/04/Captain-Key-West-Sandbar-Navigator-Icon-2-512x512-1.png" 
+        alt="Captain Key West Logo" 
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+
+  <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.5em] mb-4">
+    Captain Key West &copy; {new Date().getFullYear()}
+  </p>
+  
+  <a 
+    href="https://captainkeywest.com" 
+    target="_blank" 
+    rel="noreferrer" 
+    className="text-orange-500 text-[10px] font-black uppercase tracking-widest hover:text-white transition"
+  >
+    Return to CaptainKeyWest.com
+  </a>
+</footer>
+          
+          
         </main>
       ) : (
         <main className="max-w-5xl mx-auto px-6 py-12">
